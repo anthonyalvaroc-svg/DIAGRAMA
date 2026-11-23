@@ -451,11 +451,10 @@ const MODELOS_TORRE = {
     fontSize: 40,
     sitioPos: { xRatio: 0.24, yRatio: 0.23 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.220, yRatio: 0.650 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.660, yRatio: 0.960, size: 28 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.002, yRatio: 0.450 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.660, yRatio: 0.960, size: 20 }
     ]
   },
-
 
   monopolo: {
     nombre: "Torre monopolo",
@@ -463,16 +462,17 @@ const MODELOS_TORRE = {
     fontSize: 40,
     sitioPos: { xRatio: 0.24, yRatio: 0.28 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.295, yRatio: 0.492 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.795, yRatio: 0.942 },
-      { texto: `${v.rol1Sup} m`,     xRatio: 0.640, yRatio: 0.132 },
-      { texto: `${v.rol1Inf} m`,     xRatio: 0.640, yRatio: 0.198 },
-      { texto: `${v.rol2Sup} m`,     xRatio: 0.640, yRatio: 0.273 },
-      { texto: `${v.rol2Inf} m`,     xRatio: 0.640, yRatio: 0.340 },
-      { texto: `${v.rol3Sup} m`,     xRatio: 0.650, yRatio: 0.418 },
-      { texto: `${v.rol3Inf} m`,     xRatio: 0.640, yRatio: 0.492 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.255, yRatio: 0.435 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.680, yRatio: 0.955, size: 28 },
+      { texto: `${v.rol1Sup} m`,     xRatio: 0.665, yRatio: 0.082, size: 24 },
+      { texto: `${v.rol1Inf} m`,     xRatio: 0.655, yRatio: 0.132, size: 24 },
+      { texto: `${v.rol2Sup} m`,     xRatio: 0.665, yRatio: 0.185, size: 24 },
+      { texto: `${v.rol2Inf} m`,     xRatio: 0.655, yRatio: 0.238, size: 24 },
+      { texto: `${v.rol3Sup} m`,     xRatio: 0.665, yRatio: 0.305, size: 24 },
+      { texto: `${v.rol3Inf} m`,     xRatio: 0.655, yRatio: 0.358, size: 24 }
     ]
   },
+
   autosoportada_normal: {
     nombre: "Torre autosoportada (roldana normal)",
     src: "img/3_torre_autosoportada_normal.png",
