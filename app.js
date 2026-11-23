@@ -448,30 +448,32 @@ const MODELOS_TORRE = {
   arbol: {
     nombre: "Torre público tipo árbol",
     src: "img/1_torre_arbol.png",
-    fontSize: 38,
+    fontSize: 30,
     sitioPos: { xRatio: 0.24, yRatio: 0.23 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.220, yRatio: 0.495 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.695, yRatio: 0.952, size: 28 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.215, yRatio: 0.545, size: 30 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.675, yRatio: 0.960, size: 28 }
     ]
   },
 
-  monopolo: {
+
+    monopolo: {
     nombre: "Torre monopolo",
     src: "img/2_torre_monopolo.png",
-    fontSize: 34,
+    fontSize: 28,
     sitioPos: { xRatio: 0.24, yRatio: 0.28 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.245, yRatio: 0.435 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.675, yRatio: 0.972, size: 28 },
-      { texto: `${v.rol1Sup} m`,     xRatio: 0.725, yRatio: 0.082, size: 24 },
-      { texto: `${v.rol1Inf} m`,     xRatio: 0.715, yRatio: 0.132, size: 24 },
-      { texto: `${v.rol2Sup} m`,     xRatio: 0.725, yRatio: 0.185, size: 24 },
-      { texto: `${v.rol2Inf} m`,     xRatio: 0.715, yRatio: 0.238, size: 24 },
-      { texto: `${v.rol3Sup} m`,     xRatio: 0.725, yRatio: 0.305, size: 24 },
-      { texto: `${v.rol3Inf} m`,     xRatio: 0.715, yRatio: 0.358, size: 24 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.215, yRatio: 0.540, size: 28 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.725, yRatio: 0.942, size: 24 },
+      { texto: `${v.rol1Sup} m`,     xRatio: 0.730, yRatio: 0.088, size: 22 },
+      { texto: `${v.rol1Inf} m`,     xRatio: 0.720, yRatio: 0.138, size: 22 },
+      { texto: `${v.rol2Sup} m`,     xRatio: 0.730, yRatio: 0.192, size: 22 },
+      { texto: `${v.rol2Inf} m`,     xRatio: 0.720, yRatio: 0.245, size: 22 },
+      { texto: `${v.rol3Sup} m`,     xRatio: 0.745, yRatio: 0.312, size: 22 },
+      { texto: `${v.rol3Inf} m`,     xRatio: 0.735, yRatio: 0.365, size: 22 }
     ]
   },
+
 
   autosoportada_normal: {
     nombre: "Torre autosoportada (roldana normal)",
