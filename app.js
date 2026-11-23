@@ -1,5 +1,4 @@
 const FONT_SIZE_RELLENO = 16;
-const FONT_SIZE_SITIO = 32;
 
 function setFuenteRelleno(ctx, color = "#111827", align = "center", baseline = "middle", size = FONT_SIZE_RELLENO) {
   ctx.fillStyle = color;
@@ -174,7 +173,7 @@ function dibujarPuertaDobleHorizontal(ctx, x, y, anchoTotal, dirY = 1) {
 }
 
 /* =========================================================
-   PESTAÑA 1: DIAGRAMA SPAT (F12M)
+   PESTAÑA 1: DIAGRAMA SPAT (F12M) - INTACTO
    ========================================================= */
 function dibujarSpat() {
   const canvas = document.getElementById("canvasSpat");
@@ -203,11 +202,11 @@ function dibujarSpat() {
 
   const centerX = boxX + boxW / 2;
   ctx.save();
-  setFuenteRelleno(ctx, "#dc2626", "center", "middle", FONT_SIZE_SITIO);
-  ctx.fillText(sitio, centerX, boxY + 42);
+  setFuenteRelleno(ctx, "#dc2626", "center", "middle", 32);
+  ctx.fillText(sitio, centerX, boxY + 34);
   ctx.restore();
 
-  dibujarSimboloTorre(ctx, tipoTorre, centerX, boxY + boxH / 2 + 32, 1);
+  dibujarSimboloTorre(ctx, tipoTorre, centerX, boxY + boxH / 2 + 25, 1);
 
   const posicionesPozos = [
     { x: boxX + 275, y: boxY + 325 },
@@ -269,7 +268,7 @@ function dibujarSpat() {
   ctx.restore();
 
   const endBlueX = 595;
-  const endBlueY = 855;
+  const endBlueY = 825;
   ctx.save();
   ctx.strokeStyle = "#0284c7";
   ctx.lineWidth = 5.5;
@@ -279,7 +278,7 @@ function dibujarSpat() {
   ctx.stroke();
 
   const endRedX = 720;
-  const endRedY = 985;
+  const endRedY = 935;
   ctx.strokeStyle = "#dc2626";
   ctx.lineWidth = 5.5;
   ctx.beginPath();
@@ -288,7 +287,6 @@ function dibujarSpat() {
   ctx.stroke();
   ctx.restore();
 
-  // Letra negra a la mitad (24px), valores en rojo (48px) desplazados a la derecha sin tocar la línea roja
   const lecturas = [
     { pct: "50%-15MTS=", ohm: `${v50} OHMS`, x: 565, y: 635 },
     { pct: "60%-18MTS=", ohm: `${v60} OHMS`, x: 645, y: 745 },
@@ -314,17 +312,16 @@ function dibujarSpat() {
 }
 
 /* =========================================================
-   PESTAÑA 2: ESQUEMA 1 - PERÍMETRO Y COORDENADAS INCLINADAS
+   PESTAÑA 2: ESQUEMA 1 - PERÍMETRO Y COORDENADAS INCLINADAS - INTACTO
    ========================================================= */
 function dibujarCoordInclinada(ctx, x, y, titulo, coordTexto, angleRad) {
   ctx.save();
   ctx.translate(x, y);
   ctx.rotate(angleRad);
 
-  // Sin marco ni recuadro: texto limpio sobre el plano
-  setFuenteRelleno(ctx, "#111827", "center", "middle", 15);
-  ctx.fillText(titulo, 0, -12);
-  ctx.fillText(coordTexto || "-", 0, 12);
+  setFuenteRelleno(ctx, "#111827", "center", "middle");
+  ctx.fillText(titulo, 0, -13);
+  ctx.fillText(coordTexto || "-", 0, 13);
   ctx.restore();
 }
 
@@ -410,18 +407,16 @@ function dibujarPerimetro() {
   const centerRectX = rectX + rectW / 2;
   const centerRectY = rectY + rectH / 2;
 
-  // Cotas superiores e inferiores (Ancho) sin marco rectangular y con MTS al lado derecho del valor
-  [rectY - 38, rectY + rectH + 12].forEach((by) => {
+  [rectY - 24, rectY + rectH + 26].forEach((by) => {
     ctx.save();
     setFuenteRelleno(ctx, "#111827", "center", "middle");
-    ctx.fillText(`${ancho} MTS`, centerRectX, by + 14);
+    ctx.fillText(`${ancho} MTS`, centerRectX, by);
     ctx.restore();
   });
 
-  // Cotas izquierda y derecha (Largo) sin marco rectangular y con MTS al lado derecho del valor
-  [rectX - 42, rectX + rectW + 14].forEach((bx) => {
+  [rectX - 28, rectX + rectW + 28].forEach((bx) => {
     ctx.save();
-    ctx.translate(bx + 14, centerRectY);
+    ctx.translate(bx, centerRectY);
     ctx.rotate(-Math.PI / 2);
     setFuenteRelleno(ctx, "#111827", "center", "middle");
     ctx.fillText(`${largo} MTS`, 0, 0);
@@ -430,14 +425,14 @@ function dibujarPerimetro() {
 
   const sizeMult = Math.max(0.55, Math.min(0.85, Math.min(rectW, rectH) / 480));
   ctx.save();
-  setFuenteRelleno(ctx, "#dc2626", "center", "middle", FONT_SIZE_SITIO);
-  ctx.fillText(sitio, centerRectX, centerRectY - 94 * sizeMult);
+  setFuenteRelleno(ctx, "#dc2626", "center", "middle", 32);
+  ctx.fillText(sitio, centerRectX, centerRectY - 82 * sizeMult);
   ctx.restore();
 
-  dibujarSimboloTorre(ctx, tipoTorre, centerRectX, centerRectY + 18 * sizeMult, sizeMult);
+  dibujarSimboloTorre(ctx, tipoTorre, centerRectX, centerRectY + 12 * sizeMult, sizeMult);
 
-  const diagOffsetX = Math.min(132, rectW * 0.25);
-  const diagOffsetY = Math.min(82, rectH * 0.23);
+  const diagOffsetX = Math.min(125, rectW * 0.24);
+  const diagOffsetY = Math.min(78, rectH * 0.22);
 
   dibujarCoordInclinada(ctx, rectX + diagOffsetX, rectY + diagOffsetY, "COORDENADA A:", coordA, -Math.PI / 4);
   dibujarCoordInclinada(ctx, rectX + rectW - diagOffsetX, rectY + diagOffsetY, "COORDENADA B:", coordB, Math.PI / 4);
@@ -446,101 +441,102 @@ function dibujarPerimetro() {
 }
 
 /* =========================================================
-   PESTAÑA 3: ESQUEMA 2 - ELEVACIÓN DE TORRE (IMÁGENES ORIGINALES SIN DEFORMAR)
+   PESTAÑA 3: ESQUEMA 2 - ELEVACIÓN DE TORRE
+   VALORES EN DOBLE TAMAÑO ALINEADOS AL COSTADO DE CADA "="
    ========================================================= */
 const MODELOS_TORRE = {
   arbol: {
     nombre: "Torre público tipo árbol",
     src: "img/1_torre_arbol.png",
-    fontSize: 17,
-    sitioPos: { xRatio: 0.20, yRatio: 0.23 },
+    fontSize: 34,
+    sitioPos: { xRatio: 0.24, yRatio: 0.23 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.045, yRatio: 0.485 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.875, yRatio: 0.942 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.265, yRatio: 0.440 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.805, yRatio: 0.945 }
     ]
   },
   monopolo: {
     nombre: "Torre monopolo",
     src: "img/2_torre_monopolo.png",
-    fontSize: 16,
-    sitioPos: { xRatio: 0.22, yRatio: 0.23 },
+    fontSize: 28,
+    sitioPos: { xRatio: 0.24, yRatio: 0.28 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.075, yRatio: 0.448 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.775, yRatio: 0.942 },
-      { texto: `${v.rol1Sup} m`,     xRatio: 0.750, yRatio: 0.125 },
-      { texto: `${v.rol1Inf} m`,     xRatio: 0.750, yRatio: 0.215 },
-      { texto: `${v.rol2Sup} m`,     xRatio: 0.745, yRatio: 0.305 },
-      { texto: `${v.rol2Inf} m`,     xRatio: 0.750, yRatio: 0.395 },
-      { texto: `${v.rol3Sup} m`,     xRatio: 0.815, yRatio: 0.485 },
-      { texto: `${v.rol3Inf} m`,     xRatio: 0.790, yRatio: 0.575 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.280, yRatio: 0.415 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.815, yRatio: 0.945 },
+      { texto: `${v.rol1Sup} m`,     xRatio: 0.655, yRatio: 0.132 },
+      { texto: `${v.rol1Inf} m`,     xRatio: 0.655, yRatio: 0.198 },
+      { texto: `${v.rol2Sup} m`,     xRatio: 0.655, yRatio: 0.273 },
+      { texto: `${v.rol2Inf} m`,     xRatio: 0.655, yRatio: 0.340 },
+      { texto: `${v.rol3Sup} m`,     xRatio: 0.675, yRatio: 0.418 },
+      { texto: `${v.rol3Inf} m`,     xRatio: 0.655, yRatio: 0.492 }
     ]
   },
   autosoportada_normal: {
     nombre: "Torre autosoportada (roldana normal)",
     src: "img/3_torre_autosoportada_normal.png",
-    fontSize: 17,
-    sitioPos: { xRatio: 0.22, yRatio: 0.22 },
+    fontSize: 30,
+    sitioPos: { xRatio: 0.20, yRatio: 0.22 },
     cotas: (v) => [
-      { texto: `${v.roldanaSup} m`,  xRatio: 0.075, yRatio: 0.562 },
-      { texto: `${v.roldanaInf} m`,  xRatio: 0.750, yRatio: 0.652 },
-      { texto: `${v.alturaTotal} m`, xRatio: 0.865, yRatio: 0.525 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.555, yRatio: 0.935 }
+      { texto: `${v.roldanaSup} m`,  xRatio: 0.235, yRatio: 0.525 },
+      { texto: `${v.roldanaInf} m`,  xRatio: 0.665, yRatio: 0.585 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.840, yRatio: 0.425 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.460, yRatio: 0.945 }
     ]
   },
   arriostrada_escalera_gato: {
     nombre: "Torre arriostrada con escalera gato",
     src: "img/4_torre_arriostrada_escalera.png",
-    fontSize: 16,
-    sitioPos: { xRatio: 0.23, yRatio: 0.23 },
+    fontSize: 30,
+    sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
-      { texto: `${v.alturaBase} m`,     xRatio: 0.275, yRatio: 0.422 },
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.665, yRatio: 0.252 },
-      { texto: `${v.alturaEscalera} m`, xRatio: 0.770, yRatio: 0.515 },
-      { texto: `${v.alturaEdificio} m`, xRatio: 0.865, yRatio: 0.775 }
+      { texto: `${v.alturaBase} m`,     xRatio: 0.305, yRatio: 0.422 },
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.665, yRatio: 0.235 },
+      { texto: `${v.alturaEscalera} m`, xRatio: 0.675, yRatio: 0.505 },
+      { texto: `${v.alturaEdificio} m`, xRatio: 0.785, yRatio: 0.775 }
     ]
   },
   ventada_edificio: {
     nombre: "Torre ventada con edificio",
     src: "img/5_torre_ventada_edificio.png",
-    fontSize: 16,
-    sitioPos: { xRatio: 0.22, yRatio: 0.23 },
+    fontSize: 30,
+    sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.765, yRatio: 0.305 },
-      { texto: `${v.alturaBase} m`,     xRatio: 0.540, yRatio: 0.502 },
-      { texto: `${v.alturaEdificio} m`, xRatio: 0.865, yRatio: 0.805 }
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.755, yRatio: 0.265 },
+      { texto: `${v.alturaBase} m`,     xRatio: 0.485, yRatio: 0.505 },
+      { texto: `${v.alturaEdificio} m`, xRatio: 0.785, yRatio: 0.795 }
     ]
   },
   ventada_piso: {
     nombre: "Torre ventada de piso",
     src: "img/6_torre_ventada_piso.png",
-    fontSize: 17,
-    sitioPos: { xRatio: 0.22, yRatio: 0.23 },
+    fontSize: 30,
+    sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.805, yRatio: 0.518 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.625, yRatio: 0.928 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.815, yRatio: 0.505 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.555, yRatio: 0.945 }
     ]
   },
   autosoportada_encima: {
     nombre: "Torre autosoportada (roldana encima)",
     src: "img/7_torre_autosoportada_encima.png",
-    fontSize: 17,
-    sitioPos: { xRatio: 0.22, yRatio: 0.22 },
+    fontSize: 30,
+    sitioPos: { xRatio: 0.20, yRatio: 0.22 },
     cotas: (v) => [
-      { texto: `${v.roldanaSup} m`,  xRatio: 0.055, yRatio: 0.578 },
-      { texto: `${v.roldanaInf} m`,  xRatio: 0.755, yRatio: 0.665 },
-      { texto: `${v.alturaTotal} m`, xRatio: 0.870, yRatio: 0.525 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.560, yRatio: 0.935 }
+      { texto: `${v.roldanaSup} m`,  xRatio: 0.245, yRatio: 0.515 },
+      { texto: `${v.roldanaInf} m`,  xRatio: 0.665, yRatio: 0.565 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.755, yRatio: 0.420 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.460, yRatio: 0.945 }
     ]
   },
   arriostrada_edificio_normal: {
     nombre: "Torre arriostrada con edificio normal",
     src: "img/8_torre_arriostrada_edificio.png",
-    fontSize: 16,
-    sitioPos: { xRatio: 0.22, yRatio: 0.23 },
+    fontSize: 30,
+    sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
-      { texto: `${v.alturaBase} m`,     xRatio: 0.335, yRatio: 0.530 },
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.815, yRatio: 0.305 },
-      { texto: `${v.alturaEdificio} m`, xRatio: 0.870, yRatio: 0.805 }
+      { texto: `${v.alturaBase} m`,     xRatio: 0.395, yRatio: 0.532 },
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.755, yRatio: 0.275 },
+      { texto: `${v.alturaEdificio} m`, xRatio: 0.785, yRatio: 0.785 }
     ]
   }
 };
@@ -636,7 +632,7 @@ function dibujarTorreElevacion() {
 
       ctx.save();
       ctx.strokeStyle = "#94a3b8";
-      ctx.setLineDash([8, 6]);
+      ctx.setLineDash([6, 4]);
       ctx.lineWidth = 2;
       ctx.strokeRect(40, 40, canvas.width - 80, canvas.height - 80);
       ctx.setLineDash([]);
@@ -665,23 +661,22 @@ function dibujarTorreElevacion() {
 
     ctx.drawImage(img, drawX, drawY, drawW, drawH);
 
-    // Código de sitio al doble de tamaño (32px) en Esquema 2
-    const sx = drawX + drawW * modelo.sitioPos.xRatio;
-    const sy = drawY + drawH * modelo.sitioPos.yRatio;
+    // Código de sitio en doble tamaño (32px)
+    const sPos = modelo.sitioPos || { xRatio: 0.24, yRatio: 0.22 };
     ctx.save();
-    setFuenteRelleno(ctx, "#dc2626", "center", "middle", FONT_SIZE_SITIO);
-    ctx.fillText(sitio, sx, sy);
+    setFuenteRelleno(ctx, "#dc2626", "center", "middle", 32);
+    ctx.fillText(sitio, drawX + drawW * sPos.xRatio, drawY + drawH * sPos.yRatio);
     ctx.restore();
 
-    // Superponer valores numéricos exactamente como en v5 sin tapar las letras originales
-    const fSize = modelo.fontSize || 17;
+    // Superponer valores numéricos al doble de tamaño, alineados justo al costado de cada "="
     const etiquetas = modelo.cotas(valores);
+    const fSize = modelo.fontSize || 30;
     etiquetas.forEach((item) => {
       const tx = drawX + drawW * item.xRatio;
       const ty = drawY + drawH * item.yRatio;
 
       ctx.save();
-      setFuenteRelleno(ctx, "#1f2937", "left", "middle", fSize);
+      setFuenteRelleno(ctx, "#111827", "left", "middle", fSize);
       ctx.fillText(item.texto, tx, ty);
       ctx.restore();
     });
