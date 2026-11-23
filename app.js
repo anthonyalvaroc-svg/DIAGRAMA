@@ -448,20 +448,20 @@ const MODELOS_TORRE = {
   arbol: {
     nombre: "Torre público tipo árbol",
     src: "img/1_torre_arbol.png",
-    fontSize: 34,
+    fontSize: 40,
     sitioPos: { xRatio: 0.24, yRatio: 0.23 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.245, yRatio: 0.448 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.245, yRatio: 0.518 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.815, yRatio: 0.945 }
     ]
   },
   monopolo: {
     nombre: "Torre monopolo",
     src: "img/2_torre_monopolo.png",
-    fontSize: 30,
+    fontSize: 40,
     sitioPos: { xRatio: 0.24, yRatio: 0.28 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.295, yRatio: 0.422 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.295, yRatio: 0.492 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.795, yRatio: 0.942 },
       { texto: `${v.rol1Sup} m`,     xRatio: 0.640, yRatio: 0.132 },
       { texto: `${v.rol1Inf} m`,     xRatio: 0.640, yRatio: 0.198 },
@@ -474,73 +474,72 @@ const MODELOS_TORRE = {
   autosoportada_normal: {
     nombre: "Torre autosoportada (roldana normal)",
     src: "img/3_torre_autosoportada_normal.png",
-    fontSize: 32,
+    fontSize: 40,
     sitioPos: { xRatio: 0.20, yRatio: 0.22 },
     cotas: (v) => [
       { texto: `${v.roldanaSup} m`,  xRatio: 0.245, yRatio: 0.542 },
       { texto: `${v.roldanaInf} m`,  xRatio: 0.655, yRatio: 0.598 },
-      { texto: `${v.alturaTotal} m`, xRatio: 0.795, yRatio: 0.435 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.795, yRatio: 0.505 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.465, yRatio: 0.950 }
     ]
   },
   arriostrada_escalera_gato: {
     nombre: "Torre arriostrada con escalera gato",
     src: "img/4_torre_arriostrada_escalera.png",
-    fontSize: 30,
+    fontSize: 40,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
       { texto: `${v.alturaBase} m`,     xRatio: 0.315, yRatio: 0.422 },
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.650, yRatio: 0.245 },
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.650, yRatio: 0.315 },
       { texto: `${v.alturaEscalera} m`, xRatio: 0.660, yRatio: 0.512 },
-      { texto: `${v.alturaEdificio} m`, xRatio: 0.760, yRatio: 0.785 }
+      { texto: `${v.alturaEdificio} m`, xRatio: 0.760, yRatio: 0.855 }
     ]
   },
   ventada_edificio: {
     nombre: "Torre ventada con edificio",
     src: "img/5_torre_ventada_edificio.png",
-    fontSize: 32,
+    fontSize: 40,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.740, yRatio: 0.275 },
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.740, yRatio: 0.345 },
       { texto: `${v.alturaBase} m`,     xRatio: 0.490, yRatio: 0.512 },
-      { texto: `${v.alturaEdificio} m`, xRatio: 0.760, yRatio: 0.805 }
+      { texto: `${v.alturaEdificio} m`, xRatio: 0.760, yRatio: 0.875 }
     ]
   },
   ventada_piso: {
     nombre: "Torre ventada de piso",
     src: "img/6_torre_ventada_piso.png",
-    fontSize: 34,
+    fontSize: 40,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.785, yRatio: 0.512 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.785, yRatio: 0.582 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.545, yRatio: 0.945 }
     ]
   },
   autosoportada_encima: {
     nombre: "Torre autosoportada (roldana encima)",
     src: "img/7_torre_autosoportada_encima.png",
-    fontSize: 32,
+    fontSize: 40,
     sitioPos: { xRatio: 0.20, yRatio: 0.22 },
     cotas: (v) => [
       { texto: `${v.roldanaSup} m`,  xRatio: 0.250, yRatio: 0.532 },
       { texto: `${v.roldanaInf} m`,  xRatio: 0.655, yRatio: 0.580 },
-      { texto: `${v.alturaTotal} m`, xRatio: 0.750, yRatio: 0.432 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.750, yRatio: 0.502 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.465, yRatio: 0.950 }
     ]
   },
   arriostrada_edificio_normal: {
     nombre: "Torre arriostrada con edificio normal",
     src: "img/8_torre_arriostrada_edificio.png",
-    fontSize: 32,
+    fontSize: 40,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
       { texto: `${v.alturaBase} m`,     xRatio: 0.385, yRatio: 0.538 },
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.740, yRatio: 0.285 },
-      { texto: `${v.alturaEdificio} m`, xRatio: 0.760, yRatio: 0.795 }
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.740, yRatio: 0.355 },
+      { texto: `${v.alturaEdificio} m`, xRatio: 0.760, yRatio: 0.865 }
     ]
   }
 };
-
 
 
 const cacheImagenesTorre = {};
