@@ -451,10 +451,11 @@ const MODELOS_TORRE = {
     fontSize: 40,
     sitioPos: { xRatio: 0.24, yRatio: 0.23 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.245, yRatio: 0.518 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.220, yRatio: 0.468 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.815, yRatio: 0.945 }
     ]
   },
+
   monopolo: {
     nombre: "Torre monopolo",
     src: "img/2_torre_monopolo.png",
