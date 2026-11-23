@@ -451,8 +451,8 @@ const MODELOS_TORRE = {
     fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.23 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.050, yRatio: 0.800 },
-      { texto: `${v.alturaBase} m`,  xRatio: 1.200, yRatio: 0.900 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.235, yRatio: 0.448 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.805, yRatio: 0.945 }
     ]
   },
   monopolo: {
@@ -461,14 +461,14 @@ const MODELOS_TORRE = {
     fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.28 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.280, yRatio: 0.415 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.815, yRatio: 0.945 },
-      { texto: `${v.rol1Sup} m`,     xRatio: 0.655, yRatio: 0.132 },
-      { texto: `${v.rol1Inf} m`,     xRatio: 0.655, yRatio: 0.198 },
-      { texto: `${v.rol2Sup} m`,     xRatio: 0.655, yRatio: 0.273 },
-      { texto: `${v.rol2Inf} m`,     xRatio: 0.655, yRatio: 0.340 },
-      { texto: `${v.rol3Sup} m`,     xRatio: 0.675, yRatio: 0.418 },
-      { texto: `${v.rol3Inf} m`,     xRatio: 0.655, yRatio: 0.492 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.285, yRatio: 0.422 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.785, yRatio: 0.942 },
+      { texto: `${v.rol1Sup} m`,     xRatio: 0.625, yRatio: 0.132 },
+      { texto: `${v.rol1Inf} m`,     xRatio: 0.625, yRatio: 0.198 },
+      { texto: `${v.rol2Sup} m`,     xRatio: 0.625, yRatio: 0.273 },
+      { texto: `${v.rol2Inf} m`,     xRatio: 0.625, yRatio: 0.340 },
+      { texto: `${v.rol3Sup} m`,     xRatio: 0.635, yRatio: 0.418 },
+      { texto: `${v.rol3Inf} m`,     xRatio: 0.625, yRatio: 0.492 }
     ]
   },
   autosoportada_normal: {
@@ -477,10 +477,10 @@ const MODELOS_TORRE = {
     fontSize: 50,
     sitioPos: { xRatio: 0.20, yRatio: 0.22 },
     cotas: (v) => [
-      { texto: `${v.roldanaSup} m`,  xRatio: 0.235, yRatio: 0.525 },
-      { texto: `${v.roldanaInf} m`,  xRatio: 0.665, yRatio: 0.585 },
-      { texto: `${v.alturaTotal} m`, xRatio: 0.840, yRatio: 0.425 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.460, yRatio: 0.945 }
+      { texto: `${v.roldanaSup} m`,  xRatio: 0.235, yRatio: 0.542 },
+      { texto: `${v.roldanaInf} m`,  xRatio: 0.645, yRatio: 0.598 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.785, yRatio: 0.435 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.455, yRatio: 0.950 }
     ]
   },
   arriostrada_escalera_gato: {
@@ -490,9 +490,9 @@ const MODELOS_TORRE = {
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
       { texto: `${v.alturaBase} m`,     xRatio: 0.305, yRatio: 0.422 },
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.665, yRatio: 0.235 },
-      { texto: `${v.alturaEscalera} m`, xRatio: 0.675, yRatio: 0.505 },
-      { texto: `${v.alturaEdificio} m`, xRatio: 0.785, yRatio: 0.775 }
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.635, yRatio: 0.245 },
+      { texto: `${v.alturaEscalera} m`, xRatio: 0.645, yRatio: 0.512 },
+      { texto: `${v.alturaEdificio} m`, xRatio: 0.745, yRatio: 0.785 }
     ]
   },
   ventada_edificio: {
@@ -501,9 +501,9 @@ const MODELOS_TORRE = {
     fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.755, yRatio: 0.265 },
-      { texto: `${v.alturaBase} m`,     xRatio: 0.485, yRatio: 0.505 },
-      { texto: `${v.alturaEdificio} m`, xRatio: 0.785, yRatio: 0.795 }
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.725, yRatio: 0.275 },
+      { texto: `${v.alturaBase} m`,     xRatio: 0.480, yRatio: 0.512 },
+      { texto: `${v.alturaEdificio} m`, xRatio: 0.745, yRatio: 0.805 }
     ]
   },
   ventada_piso: {
@@ -512,8 +512,8 @@ const MODELOS_TORRE = {
     fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.815, yRatio: 0.505 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.555, yRatio: 0.945 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.775, yRatio: 0.512 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.535, yRatio: 0.945 }
     ]
   },
   autosoportada_encima: {
@@ -522,10 +522,10 @@ const MODELOS_TORRE = {
     fontSize: 50,
     sitioPos: { xRatio: 0.20, yRatio: 0.22 },
     cotas: (v) => [
-      { texto: `${v.roldanaSup} m`,  xRatio: 0.245, yRatio: 0.515 },
-      { texto: `${v.roldanaInf} m`,  xRatio: 0.665, yRatio: 0.565 },
-      { texto: `${v.alturaTotal} m`, xRatio: 0.755, yRatio: 0.420 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.460, yRatio: 0.945 }
+      { texto: `${v.roldanaSup} m`,  xRatio: 0.240, yRatio: 0.532 },
+      { texto: `${v.roldanaInf} m`,  xRatio: 0.645, yRatio: 0.580 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.735, yRatio: 0.432 },
+      { texto: `${v.alturaBase} m`,  xRatio: 0.455, yRatio: 0.950 }
     ]
   },
   arriostrada_edificio_normal: {
@@ -534,12 +534,13 @@ const MODELOS_TORRE = {
     fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
-      { texto: `${v.alturaBase} m`,     xRatio: 0.395, yRatio: 0.532 },
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.755, yRatio: 0.275 },
-      { texto: `${v.alturaEdificio} m`, xRatio: 0.785, yRatio: 0.785 }
+      { texto: `${v.alturaBase} m`,     xRatio: 0.375, yRatio: 0.538 },
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.725, yRatio: 0.285 },
+      { texto: `${v.alturaEdificio} m`, xRatio: 0.745, yRatio: 0.795 }
     ]
   }
 };
+
 
 const cacheImagenesTorre = {};
 
