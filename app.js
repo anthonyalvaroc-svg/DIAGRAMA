@@ -459,7 +459,7 @@ const MODELOS_TORRE = {
     src: "img/2_torre_monopolo.png",
     sitioPos: { xRatio: 0.14, yRatio: 0.15, align: "center" },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.062, yRatio: 0.390, size: 23 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.062, yRatio: 0.520, size: 23 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.785, yRatio: 0.956, size: 21 },
       { texto: `${v.rol1Sup} m`,     xRatio: 0.742, yRatio: 0.066, size: 15 },
       { texto: `${v.rol1Inf} m`,     xRatio: 0.742, yRatio: 0.128, size: 15 },
@@ -486,7 +486,7 @@ const MODELOS_TORRE = {
     sitioPos: { xRatio: 0.16, yRatio: 0.14, align: "center" },
     cotas: (v) => [
       { texto: `${v.alturaBase} m`,     xRatio: 0.200, yRatio: 0.436, size: 19 },
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.576, yRatio: 0.320, size: 21 },
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.576, yRatio: 0.180, size: 21 },
       { texto: `${v.alturaEscalera} m`, xRatio: 0.674, yRatio: 0.520, size: 18 },
       { texto: `${v.alturaEdificio} m`, xRatio: 0.882, yRatio: 0.776, size: 21 }
     ]
@@ -496,7 +496,7 @@ const MODELOS_TORRE = {
     src: "img/5_torre_ventada_edificio.png",
     sitioPos: { xRatio: 0.16, yRatio: 0.13, align: "center" },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.700, yRatio: 0.360, size: 22 },
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.700, yRatio: 0.320, size: 22 },
       { texto: `${v.alturaBase} m`,     xRatio: 0.440, yRatio: 0.516, size: 19 },
       { texto: `${v.alturaEdificio} m`, xRatio: 0.885, yRatio: 0.794, size: 22 }
     ]
@@ -506,7 +506,7 @@ const MODELOS_TORRE = {
     src: "img/6_torre_ventada_piso.png",
     sitioPos: { xRatio: 0.15, yRatio: 0.16, align: "center" },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.665, yRatio: 0.710, size: 22 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.665, yRatio: 0.510, size: 22 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.460, yRatio: 0.976, size: 19 }
     ]
   },
