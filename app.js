@@ -451,8 +451,8 @@ const MODELOS_TORRE = {
     fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.23 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.265, yRatio: 0.440 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.805, yRatio: 0.945 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.050, yRatio: 0.800 },
+      { texto: `${v.alturaBase} m`,  xRatio: 1.200, yRatio: 0.900 }
     ]
   },
   monopolo: {
