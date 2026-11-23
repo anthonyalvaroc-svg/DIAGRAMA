@@ -459,7 +459,7 @@ const MODELOS_TORRE = {
     src: "img/2_torre_monopolo.png",
     sitioPos: { xRatio: 0.14, yRatio: 0.15, align: "center" },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.062, yRatio: 0.488, size: 23 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.062, yRatio: 0.388, size: 23 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.785, yRatio: 0.956, size: 21 },
       { texto: `${v.rol1Sup} m`,     xRatio: 0.742, yRatio: 0.066, size: 15 },
       { texto: `${v.rol1Inf} m`,     xRatio: 0.742, yRatio: 0.128, size: 15 },
@@ -486,7 +486,7 @@ const MODELOS_TORRE = {
     sitioPos: { xRatio: 0.16, yRatio: 0.14, align: "center" },
     cotas: (v) => [
       { texto: `${v.alturaBase} m`,     xRatio: 0.200, yRatio: 0.436, size: 19 },
-      { texto: `${v.alturaTotal} m`,    xRatio: 0.576, yRatio: 0.258, size: 21 },
+      { texto: `${v.alturaTotal} m`,    xRatio: 0.576, yRatio: 0.358, size: 21 },
       { texto: `${v.alturaEscalera} m`, xRatio: 0.674, yRatio: 0.520, size: 18 },
       { texto: `${v.alturaEdificio} m`, xRatio: 0.882, yRatio: 0.776, size: 21 }
     ]
@@ -506,7 +506,7 @@ const MODELOS_TORRE = {
     src: "img/6_torre_ventada_piso.png",
     sitioPos: { xRatio: 0.15, yRatio: 0.16, align: "center" },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.665, yRatio: 0.562, size: 22 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.665, yRatio: 0.652, size: 22 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.460, yRatio: 0.976, size: 19 }
     ]
   },
@@ -528,7 +528,7 @@ const MODELOS_TORRE = {
     cotas: (v) => [
       { texto: `${v.alturaBase} m`,     xRatio: 0.304, yRatio: 0.528, size: 19 },
       { texto: `${v.alturaTotal} m`,    xRatio: 0.676, yRatio: 0.318, size: 21 },
-      { texto: `${v.alturaEdificio} m`, xRatio: 0.838, yRatio: 0.785, size: 21 }
+      { texto: `${v.alturaEdificio} m`, xRatio: 0.838, yRatio: 0.810, size: 21 }
     ]
   }
 };
