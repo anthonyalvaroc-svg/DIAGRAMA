@@ -506,7 +506,7 @@ const MODELOS_TORRE = {
     src: "img/6_torre_ventada_piso.png",
     sitioPos: { xRatio: 0.15, yRatio: 0.16, align: "center" },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.665, yRatio: 0.620, size: 22 },
+      { texto: `${v.alturaTotal} m`, xRatio: 0.685, yRatio: 0.600, size: 22 },
       { texto: `${v.alturaBase} m`,  xRatio: 0.460, yRatio: 0.976, size: 19 }
     ]
   },
