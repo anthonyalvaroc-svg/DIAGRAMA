@@ -451,8 +451,8 @@ const MODELOS_TORRE = {
     fontSize: 40,
     sitioPos: { xRatio: 0.24, yRatio: 0.23 },
     cotas: (v) => [
-      { texto: `${v.alturaTotal} m`, xRatio: 0.080, yRatio: 1.400 },
-      { texto: `${v.alturaBase} m`,  xRatio: 0.660, yRatio: 2.100, size: 20 }
+      { texto: `${v.alturaTotal} m`, xRatio: 0.080, yRatio: 0.050 },
+      { texto: `${v.alturaBase} m`,  xRatio: 3.001, yRatio: 0.050, size: 20 }
     ]
   },
 
