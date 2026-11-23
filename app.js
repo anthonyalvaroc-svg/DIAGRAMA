@@ -1,4 +1,4 @@
-const FONT_SIZE_RELLENO = 16;
+﻿const FONT_SIZE_RELLENO = 16;
 
 function setFuenteRelleno(ctx, color = "#111827", align = "center", baseline = "middle", size = FONT_SIZE_RELLENO) {
   ctx.fillStyle = color;
@@ -448,7 +448,7 @@ const MODELOS_TORRE = {
   arbol: {
     nombre: "Torre público tipo árbol",
     src: "img/1_torre_arbol.png",
-    fontSize: 34,
+    fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.23 },
     cotas: (v) => [
       { texto: `${v.alturaTotal} m`, xRatio: 0.265, yRatio: 0.440 },
@@ -458,7 +458,7 @@ const MODELOS_TORRE = {
   monopolo: {
     nombre: "Torre monopolo",
     src: "img/2_torre_monopolo.png",
-    fontSize: 28,
+    fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.28 },
     cotas: (v) => [
       { texto: `${v.alturaTotal} m`, xRatio: 0.280, yRatio: 0.415 },
@@ -474,7 +474,7 @@ const MODELOS_TORRE = {
   autosoportada_normal: {
     nombre: "Torre autosoportada (roldana normal)",
     src: "img/3_torre_autosoportada_normal.png",
-    fontSize: 30,
+    fontSize: 50,
     sitioPos: { xRatio: 0.20, yRatio: 0.22 },
     cotas: (v) => [
       { texto: `${v.roldanaSup} m`,  xRatio: 0.235, yRatio: 0.525 },
@@ -486,7 +486,7 @@ const MODELOS_TORRE = {
   arriostrada_escalera_gato: {
     nombre: "Torre arriostrada con escalera gato",
     src: "img/4_torre_arriostrada_escalera.png",
-    fontSize: 30,
+    fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
       { texto: `${v.alturaBase} m`,     xRatio: 0.305, yRatio: 0.422 },
@@ -498,7 +498,7 @@ const MODELOS_TORRE = {
   ventada_edificio: {
     nombre: "Torre ventada con edificio",
     src: "img/5_torre_ventada_edificio.png",
-    fontSize: 30,
+    fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
       { texto: `${v.alturaTotal} m`,    xRatio: 0.755, yRatio: 0.265 },
@@ -509,7 +509,7 @@ const MODELOS_TORRE = {
   ventada_piso: {
     nombre: "Torre ventada de piso",
     src: "img/6_torre_ventada_piso.png",
-    fontSize: 30,
+    fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
       { texto: `${v.alturaTotal} m`, xRatio: 0.815, yRatio: 0.505 },
@@ -519,7 +519,7 @@ const MODELOS_TORRE = {
   autosoportada_encima: {
     nombre: "Torre autosoportada (roldana encima)",
     src: "img/7_torre_autosoportada_encima.png",
-    fontSize: 30,
+    fontSize: 50,
     sitioPos: { xRatio: 0.20, yRatio: 0.22 },
     cotas: (v) => [
       { texto: `${v.roldanaSup} m`,  xRatio: 0.245, yRatio: 0.515 },
@@ -531,7 +531,7 @@ const MODELOS_TORRE = {
   arriostrada_edificio_normal: {
     nombre: "Torre arriostrada con edificio normal",
     src: "img/8_torre_arriostrada_edificio.png",
-    fontSize: 30,
+    fontSize: 50,
     sitioPos: { xRatio: 0.24, yRatio: 0.20 },
     cotas: (v) => [
       { texto: `${v.alturaBase} m`,     xRatio: 0.395, yRatio: 0.532 },
